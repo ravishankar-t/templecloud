@@ -1,0 +1,260 @@
+<!-- <div class="container">
+        
+        <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active">
+                <a href="#tab1" role="tab" data-toggle="tab">Donation</a>
+            </li>
+            <li role="presentation">
+                <a href="#tab2" role="tab" data-toggle="tab">Gold Donors List</a>
+            </li>
+            <li role="presentation">
+                <a href="#tab3" role="tab" data-toggle="tab">Donors Details</a>
+            </li>
+    
+        </ul>
+</div> -->
+&nbsp;&nbsp;
+<div class="row"  *ngIf="!showdonation">
+        <div class="col-md-12 text-right">
+                <input type="submit" value="Donate" (click)="showdonationdiv();$event.preventDefault" class="form-button proceed-but">
+                
+            </div>
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <h5 align="center">Annadaanam</h5>
+        <div class="Annadaanambox">
+            <p class="telugufont">
+                <span style="color:rgb(4, 241, 24)">శాశ్వత నిత్యాన్నదానం పధకం రూ. 1,116/- ఆపైనా</span><br>
+                ప్రాణకోటికి మూలాధారం అన్నం. ఈ అన్నమే ప్రాణిగా ప్రభవిస్తుంది. సకల దేవతలూ, పితృదేవతలు కూడా అన్ని దానములలో అన్నదానం మిన్న, అన్నదానముతో సంతోషిస్తారు మరియు వారి ఆత్మకు శాంతి కలుగుతుంది. పవిత్ర కాణిపాక పుణ్య క్షేత్రంలో స్వయంభువుగా వెలసిన స్వామివారి సన్నిధానంలో అన్నదానం చేసి అనంతమైన ఫలాన్ని పోందండి. జన్మను తరింపజేసుకోండి.	రూ. 1,00,116/-లు చెల్లించిన వారిని మహారాజ పోషకులుగాను గౌరవింపబడుతారు.		ప్రతిరోజు ఉదయం 11:00 గం.ల నుండి అన్నప్రసాదం ప్రారంభమగును. ప్రతిరోజు 2000 మందికి ఉచిత భోజనం కల్పించబడుచున్నది. దాతలు చెల్లించు విరాళాలను సెక్షన్ 80 (జి) ప్రకారము ఆదాయప పన్ను మినహాయింపు కలదు. అన్ని విరాళాలు డ్రాఫ్టులు ద్వారా లేదా నగదు ద్వారా గాని కార్యనిర్వాహణాధికారి, శ్రీ వరసిద్ధి వినాయకస్వామి వారి దేవస్థానము, కాణిపాకం వారి పేరున పంపవలెను. నగదు అయితే కార్యాలయములో చెల్లించు రశీదు పొందవచ్చును. పై విరాళాలకు ఆదాయపు పన్ను చెల్లింపు నుండి మినహాయింపు గలదు.	
+                  
+           </p>
+        </div>
+    </div>
+    <div class="col-md-6">
+       
+        <h5 align="center">Accomodation</h5>
+           
+        
+        <div class="Annadaanambox">
+        <p class="telugufont">
+            <span style="color:rgb(4, 241, 24)"> స్వయంభు శ్రీ వరసిద్ధి వినాయకుని సన్నిధిలో మీ విడిది </span><br>							
+            10 కోట్ల రూపాయల వ్యయంతో చేపట్టబడిన వంద రూములు వసతి గృహాలలో మీరు ఒక గది రిజర్వు చేసుకోండి. ఒక్కో గదికి రూ. 6,50,000 /- లు విరాళం ఇచ్చినవారి పేర్లు శిలాఫలకంపై వేయించి వారికి గాని లేదా వారి అనుమతి పొందినవారికి గాని సంవత్సరములో 40 రోజులు ఉచితంగా వసతి కల్పించబడును.ముందు డబ్బు కట్టిన వారికి ముందు ప్రాధ్యానత ఇవ్వబడును.							
+                
+         </p>
+           </div>   
+        
+    </div>
+    
+</div>
+
+&nbsp;
+<div class="container" *ngIf="showdonation">
+    <div class="col-md-12 col-sm-12">
+        <div class="form-group col-md-12 text-right">
+            <input type="submit" value="Submit" class="form-button proceed-but">&nbsp;
+            <input type="submit" value="Reset" class="form-button proceed-but">
+            <br>
+
+        </div>
+    </div>
+    <div class="container">
+        <div class="gray-block">
+            <div class="row col-md-12">
+                <div class="MainHeading">
+                    <h3>Donation Details</h3>
+                </div>
+                <div style="width: 100%; clear: both; border-bottom: dashed 1px #073881;">
+                </div>
+            </div>
+
+            <div class="row col-md-12">
+                <div class="col-md-3 col-sm-3">
+                    <label for="Donation Type">
+                        Donation Type
+                    </label>
+                    <select class="form-control">
+                        <option value="-1">--Select Type--</option>
+                        <option value="25">Adopted Temples Donation</option>
+                        <option value="20">Annadaanam Donation</option>
+                        <option value="15">Daily Free Prasdam</option>
+                        <option value="13">E-HUNDI</option>
+                        <option value="29">Gajula alankaram donations-2018</option>
+                        <option value="18">Gold Donation</option>
+                        <option value="21">Gosamrakshana Donation</option>
+                        <option value="22">Krishnamma Haratulu Donation</option>
+                        <option value="17">Procession in Dasara Days</option>
+                        <option value="14">Pushpa Alankarana Donation</option>
+                        <option value="16">Sivalayam Renovation</option>
+                        <option value="23">Vedaparirakshana Trust Donation</option>
+
+                    </select>
+
+                </div>
+
+                <div class="col-md-3 col-sm-3">
+                    <label for="Amount">
+                        Amount
+
+                    </label>
+                    <input type="text" maxlength="7" class="form-control">
+
+                </div>
+                <div class="col-md-3 col-sm-3">
+                    <label for="PerformedDate">
+                        Date of Performance</label>
+                    <input type="date" class="form-control">
+                </div>
+                <div class="col-md-3 col-sm-3">
+                    <label for="PerformedDate">
+                        Name of Performance</label>
+                    <input type="text" class="form-control">
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="MainHeading">
+                    <h3>Donor Details</h3>
+                </div>
+                <div style="width: 100%; clear: both; border-bottom: dashed 1px #073881;">
+                </div>
+            </div>
+
+            <div class="row col-md-12">
+                <div class="col-md-3 col-sm-3">
+                    <label for="country">
+                        Mobile No
+
+                    </label>
+                    <input type="text" class="form-control">
+
+                </div>
+                <div class="col-md-3 col-sm-3">
+                    <label for="email">
+                        Email
+                    </label>
+                    <input type="text" class="form-control">
+                    <input type="text" style="display: none;">
+                </div>
+                <div class="col-md-3 col-sm-3">
+                    <label for="name">
+                        Name
+                    </label>
+                    <input type="text" class="form-control">
+
+                </div>
+                <div class="col-md-3 col-sm-3">
+                    <label for="name">
+                        Gender
+                    </label>
+                    <select class="form-control">
+                        <option value="-1">--Select--</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+
+                    </select>
+                    <input type="hidden">
+                </div>
+            </div>
+            <div class="row col-md-12">
+                    
+                   <div class="col-1">
+                    <label for="day">
+                        Day
+                    </label>
+                    <select class="form-control">
+                            <option value="-1">--Select--</option>
+                    </select>
+                   
+                    </div>
+                    <div class="col-2">
+                    <label for="month">
+                        Month
+                    </label>
+                    <select class="form-control">
+                            <option value="-1">--Select--</option>
+                    </select>
+                </div>
+            
+                <div class="col-md-3 col-sm-3">
+                    <label for="mobile">
+                        Country
+                    </label>
+                    <select class="form-control">
+
+
+                        <option value="-1">--Select Country--</option>
+                        <option value="3">Afghanistan</option>
+
+                    </select>
+
+                    <input type="hidden" value="-1:::--Select Country--:::">
+                </div>
+                <div class="col-md-3 col-sm-3">
+                    <label for="address">
+                        State
+
+                    </label>
+                    <select id="MainContent_ddlState" class="form-control">
+
+
+                        <option value="-1">--Select State--</option>
+                    </select>
+                    <input type="hidden" value="-1:::--Select State--:::">
+                </div>
+                <div class="col-md-3 col-sm-3">
+                    <label for="city">
+                        City
+
+                    </label>
+                    <input type="text" class="form-control" autocomplete="off">
+
+
+                </div>
+            </div> 
+            <div class="row col-md-12">
+
+                <div class="col-md-3 col-sm-3">
+                    <label for="address">
+                        Address
+
+                    </label>
+                    <textarea rows="2" cols="20" class="form-control"></textarea>
+                </div>
+                <div class="col-md-3 col-sm-3">
+                    <label for="state">
+                        Pin Code
+
+                    </label>
+                    <input type="text" maxlength="6" class="form-control">
+
+                </div>
+                <div class="col-md-3 col-sm-3">
+                    <label for="name">
+                        Identification Type
+
+                    </label>
+                    <select class="form-control">
+                        <option value="-1">--Select Identification Type--</option>
+                        <option value="3">Aadhar Card</option>
+                        <option value="4">Driving License</option>
+                        <option value="1">PAN Card</option>
+                        <option value="5">Passport</option>
+                        <option value="6">StudentID</option>
+                        <option value="2">Voter Card</option>
+
+                    </select>
+                </div>
+                <div class="col-md-3 col-sm-3">
+                    <label for="name">
+                        Identification ID
+
+                    </label>
+                    <input type="text" class="form-control">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    &nbsp;
+</div>

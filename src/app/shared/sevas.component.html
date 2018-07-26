@@ -1,0 +1,33 @@
+<div class="container-fluid">
+        <div class="row">
+                <div class="col80">
+                    <div class="form-title">
+                        <h6>Rituals & Sevas</h6>
+                    </div>
+              </div>
+              <div class="col40">
+                  <button type="button" *ngIf="showme" class="custom-button-width" (click)="showsevatimings(false);$event.preventDefault">More..</button>
+              </div>
+             
+        </div>
+      
+        <div class="box40" *ngFor="let item of rituals; let i index">
+                <!-- <h5>Suprabatha Seva/ Bindu Teertha Abhishekam</h5>
+            <p>Daily from 04:00 AM-05:00 AM<br></p><h5>Nijaroopa Darsanam</h5>
+            <p>Daily from 05:00 AM-05:30 AM<br></p><h5> Panchamrutha Abhishekam</h5>
+            <p>Daily from 05:30 AM-06:00 AM<br></p><h5>Nijaroopa Darsanam</h5>
+            <p>Daily from 07:00 AM-07:30 AM<br></p><h5>Ksheerabhishekam/Palabhishekam</h5>
+            <p>Daily from 07:30 AM-08:00 AM<br></p><h5>Nijaroopa Darsanam</h5>
+            <p>Daily from 08:30 AM-09:00 AM<br></p><h5> Panchamrutha Abhishekam</h5>
+            <p>Daily from 09:00 AM-09:30 AM<br></p><h5>Nijaroopa Darsanam</h5>
+            <p>Daily from 10:30 AM-11:00 AM<br></p><h5> Panchamrutha Abhishekam</h5>
+            <p>Daily from 11:00 AM-11:30 AM<br></p><h5>Kalyanosthavam</h5><p>Daily from 11:00 AM-12:30 PM<br></p><h5>Nijaroopa Darsanam</h5><p>Daily from 04:30 PM-05:00 PM<br></p><h5>Pramanam/Break</h5>
+            <p>Daily from 05:00 PM-05:45 PM<br></p><h5>Ksheerabhishekam/Palabhishekam</h5>
+            <p>Daily from 05:45 PM-06:15 PM<br></p><h5>Mahaharathi</h5><p>Daily from 06:15 PM-06:30 PM<br>
+            </p><h5>Sarva Darsanam</h5><p>Daily from 06:30 PM-09:30 PM<br></p> -->
+            
+            <p>{{item.sevaname}}</p>
+            <p>{{item.timings}}</p>
+                </div>
+</div>   
+    
